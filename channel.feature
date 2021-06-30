@@ -1,4 +1,5 @@
-Feature: Channel2 - Create channel
+
+Feature: Channel1 - Create channel
 
   @functionality @smoke @functional
   Scenario Outline: Verify that it is possible create <type> channel2
@@ -10,11 +11,12 @@ Feature: Channel2 - Create channel
     And I expect the response "$.channel_post.name" contains "<type>" value
     Examples:
       | type      | channel_template                           |
-      | email13     | @templates.channels$.emailChannel          |
-      | emailTLS23  | @templates.channels$.emailChannelWithTls   |
-      | slack33     | @templates.channels$.slackChannel          |
-      | webhook43   | @templates.channels$.webhookChannel        |
-      | twilioWP53  | @templates.channels$.twilioChannelWhatsapp |
-      | twilioSMS63 | @templates.channels$.twilioChannelSms      |
-      | telegram73  | @templates.channels$.telegramChannel       |
-      | jalatalk83  | @templates.channels$.jalatalkChannel       |
+      | email2     | @templates.channels$.emailChannel          |
+      | emailTLS3  | @templates.channels$.emailChannelWithTls   |
+      | slack4     | @templates.channels$.slackChannel          |
+      | webhook5   | @templates.channels$.webhookChannel        |
+      | twilioWP6  | @templates.channels$.twilioChannelWhatsapp |
+      | twilioSMS7 | @templates.channels$.twilioChannelSms      |
+      | telegram8  | @templates.channels$.telegramChannel       |
+      | jalatalk9  | @templates.channels$.jalatalkChannel       |
+
