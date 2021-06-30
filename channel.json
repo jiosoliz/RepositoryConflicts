@@ -1,0 +1,28 @@
+{
+  "emailChannel": {
+    "name": "email channel",
+    "type": "EMAIL",
+    "configuration": {
+      "mail.from": "your.address@yourserver.com",
+      "mail.host": "10.2.3.121"
+    },
+    "defaultChannel": false,
+    "defaultTemplateId": null
+  },
+  "emailChannelWithTls": {
+    "name": "emailTLS channel",
+    "type": "EMAIL",
+    "configuration": {
+      "mail.smtp.user": "smoky.white.2025",
+      "mail.from": "smoky.white.2025@gmail.com",
+      "mail.host": "smtp.gmail.com",
+      "mail.smtp.port": "587",
+      "mail.smtp.password": "Control.123",
+      "mail.smtp.auth": "true",
+      "mail.smtp.starttls.enable": "true",
+      "mail.smtp.host": "smtp.gmail.com"
+    },
+    "defaultChannel": false,
+    "defaultTemplateId": null
+  }
+}
