@@ -1,8 +1,9 @@
+
 Feature: Channel1 - Create channel
 
-  @functionality @smoke
-  Scenario Outline: Verify that it is possible create <type> channel
-    Given I set a "POST" request to "/channels"
+  @functionality @smoke @functional
+  Scenario Outline: Verify that it is possible create <type> channel2
+    Given I set a "PUT" request to "/channels"
     And I set the "<channel_template>" template
     When I send the request
     Then I expect the status code is equals than "200"
@@ -18,3 +19,4 @@ Feature: Channel1 - Create channel
       | twilioSMS7 | @templates.channels$.twilioChannelSms      |
       | telegram8  | @templates.channels$.telegramChannel       |
       | jalatalk9  | @templates.channels$.jalatalkChannel       |
+
