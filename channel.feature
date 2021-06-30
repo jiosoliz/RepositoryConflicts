@@ -1,8 +1,8 @@
-Feature: Channel - Create channel
+Feature: Channel2 - Create channel
 
-  @functionality @smoke
-  Scenario Outline: Verify that it is possible create <type> channel
-    Given I set a "POST" request to "/channels"
+  @functionality @smoke @functional
+  Scenario Outline: Verify that it is possible create <type> channel2
+    Given I set a "PUT" request to "/channels"
     And I set the "<channel_template>" template
     When I send the request
     Then I expect the status code is equals than "200"
@@ -10,11 +10,11 @@ Feature: Channel - Create channel
     And I expect the response "$.channel_post.name" contains "<type>" value
     Examples:
       | type      | channel_template                           |
-      | email     | @templates.channels$.emailChannel          |
-      | emailTLS  | @templates.channels$.emailChannelWithTls   |
-      | slack     | @templates.channels$.slackChannel          |
-      | webhook   | @templates.channels$.webhookChannel        |
-      | twilioWP  | @templates.channels$.twilioChannelWhatsapp |
-      | twilioSMS | @templates.channels$.twilioChannelSms      |
-      | telegram  | @templates.channels$.telegramChannel       |
-      | jalatalk  | @templates.channels$.jalatalkChannel       |
+      | email13     | @templates.channels$.emailChannel          |
+      | emailTLS23  | @templates.channels$.emailChannelWithTls   |
+      | slack33     | @templates.channels$.slackChannel          |
+      | webhook43   | @templates.channels$.webhookChannel        |
+      | twilioWP53  | @templates.channels$.twilioChannelWhatsapp |
+      | twilioSMS63 | @templates.channels$.twilioChannelSms      |
+      | telegram73  | @templates.channels$.telegramChannel       |
+      | jalatalk83  | @templates.channels$.jalatalkChannel       |
